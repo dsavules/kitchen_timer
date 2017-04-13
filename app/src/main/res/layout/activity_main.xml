@@ -19,9 +19,10 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="32dp"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.502" />
 
     <Button
         android:id="@+id/button"
@@ -63,7 +64,7 @@
 
     <Button
         android:id="@+id/button_start"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:onClick="onClickStart"
         android:text="Start"
@@ -83,5 +84,49 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_plus"
         tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton1"
+        android:text="@string/value1"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_start"
+        app:layout_constraintRight_toLeftOf="@+id/button2"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton2"
+        android:text="@string/value2"
+        app:layout_constraintTop_toTopOf="@+id/button1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton3"
+        android:text="@string/value3"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="20dp"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>
